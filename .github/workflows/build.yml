@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
     steps:
       - uses: actions/checkout@v4
 
@@ -15,12 +18,14 @@ jobs:
         id: build
         uses: geode-sdk/build-geode-mod@main
         with:
-          sdk: given
+          sdk: latest
+          cli: latest
           target: Win64
           build-config: Release
 
-      - name: Upload .geode
+      - name: Upload .geode artifact
         uses: actions/upload-artifact@v4
         with:
-          name: MODGD-Platformer-Save
-          path: ${{ steps.build.outputs.build-output }}
+          name: MODGD-Platformer-Save-Windows
+          path: output/*.geode
+          if-no-files-found: error

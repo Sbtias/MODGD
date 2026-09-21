@@ -1,0 +1,29 @@
+{
+  "geode": "5.7.1",
+  "gd": {
+    "win": "2.2081"
+  },
+  "id": "sbtias.modgd-platformer-save",
+  "name": "MODGD Platformer Save",
+  "version": "v1.0.0",
+  "developer": "Sbtias",
+  "description": "Save and restore progress in Geometry Dash platformer levels.",
+  "tags": ["enhancement", "gameplay"],
+  "dependencies": {
+    "sabe.persistenceapi": ">=v1.2.0"
+  },
+  "settings": {
+    "enabled": {
+      "name": "Enabled",
+      "description": "Save and restore platformer level checkpoints.",
+      "type": "bool",
+      "default": true
+    },
+    "remove-save-on-complete": {
+      "name": "Remove Save on Complete",
+      "description": "Delete the saved run when the level is completed.",
+      "type": "bool",
+      "default": false
+    }
+  }
+}

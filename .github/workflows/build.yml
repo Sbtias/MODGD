@@ -15,7 +15,7 @@ jobs:
         id: build
         uses: geode-sdk/build-geode-mod@main
         with:
-          sdk: 5.7.1
+          sdk: given
           target: Win64
           build-config: Release
 
